@@ -3,6 +3,7 @@ import GoogleProvider from "next-auth/providers/google";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import { prisma } from "@/lib/prisma";
 import { SessionStrategy } from "next-auth";
+import type { NextRequest } from "next/server";
 
 // Extend Session type
 declare module "next-auth" {
@@ -17,12 +18,11 @@ declare module "next-auth" {
 
   interface User {
     id: string;
-      name?: string | null;
-      email?: string | null;
-      image?: string | null;
+    name?: string | null;
+    email?: string | null;
+    image?: string | null;
   }
 }
-
 
 export const authOptions: AuthOptions = {
   adapter: PrismaAdapter(prisma),
@@ -53,5 +53,7 @@ export const authOptions: AuthOptions = {
   secret: process.env.NEXTAUTH_SECRET,
 };
 
-const handler = NextAuth(authOptions);
+// Wrap NextAuth in a function so Next.js 14 recognizes it as a route
+const handler = (req: NextRequest) => NextAuth(authOptions)(req);
+
 export { handler as GET, handler as POST };
