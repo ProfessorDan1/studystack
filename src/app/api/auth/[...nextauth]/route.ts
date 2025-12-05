@@ -53,7 +53,7 @@ export const authOptions: AuthOptions = {
   secret: process.env.NEXTAUTH_SECRET,
 };
 
-// Wrap NextAuth in a function so Next.js 14 recognizes it as a route
+// Wrap NextAuth to make it a valid Next.js route
 const handler = (req: NextRequest) => NextAuth(authOptions)(req);
 
 export { handler as GET, handler as POST };
