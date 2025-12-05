@@ -1,0 +1,56 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+
+# Output
+.next/
+out/
+dist/
+build/
+.vercel/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Prisma
+prisma/*.db
+prisma/dev.db-journal
+prisma/*.db-journal
+prisma/migrations/*-shadow.db
+
+# Logs
+logs
+*.log
+*.log.*
+debug.log
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Typescript build
+*.tsbuildinfo
+
+# Supabase local
+.supabase/
+
+# NextAuth cache
+.nextauth/
+
+# Uploads / Temp files
+tmp/
+uploads/
+
+# Ignore local files for dev
+*.local

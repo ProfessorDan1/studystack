@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -----------------------------------------
+   BASE THEME VARIABLES (Tailwind v3 safe)
+------------------------------------------ */
+
+:root {
+  --radius: 10px;
+
+  /* Light mode colors */
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+
+  --card: #ffffff;
+  --card-foreground: #1a1a1a;
+
+  --popover: #ffffff;
+  --popover-foreground: #1a1a1a;
+
+  --primary: #222222;
+  --primary-foreground: #ffffff;
+
+  --secondary: #f3f4f6;
+  --secondary-foreground: #222222;
+
+  --muted: #f3f4f6;
+  --muted-foreground: #6b7280;
+
+  --accent: #f3f4f6;
+  --accent-foreground: #222222;
+
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+
+  --border: #e5e7eb;
+  --input: #e5e7eb;
+  --ring: #3b82f6;
+
+  /* Custom chart colors */
+  --chart-1: #f59e0b;
+  --chart-2: #3b82f6;
+  --chart-3: #6366f1;
+  --chart-4: #10b981;
+  --chart-5: #ef4444;
+
+  /* Sidebar */
+  --sidebar: #ffffff;
+  --sidebar-foreground: #1a1a1a;
+  --sidebar-primary: #222222;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f3f4f6;
+  --sidebar-accent-foreground: #1a1a1a;
+  --sidebar-border: #e5e7eb;
+  --sidebar-ring: #3b82f6;
+}
+
+/* -----------------------------------------
+   DARK MODE
+------------------------------------------ */
+.dark {
+  --background: #1a1a1a;
+  --foreground: #ffffff;
+
+  --card: #262626;
+  --card-foreground: #ffffff;
+
+  --popover: #262626;
+  --popover-foreground: #ffffff;
+
+  --primary: #ffffff;
+  --primary-foreground: #1a1a1a;
+
+  --secondary: #333333;
+  --secondary-foreground: #ffffff;
+
+  --muted: #333333;
+  --muted-foreground: #9ca3af;
+
+  --accent: #333333;
+  --accent-foreground: #ffffff;
+
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+
+  --border: #333333;
+  --input: #404040;
+  --ring: #3b82f6;
+
+  /* Chart colors (dark variants) */
+  --chart-1: #fbbf24;
+  --chart-2: #60a5fa;
+  --chart-3: #818cf8;
+  --chart-4: #34d399;
+  --chart-5: #f87171;
+
+  /* Sidebar (dark) */
+  --sidebar: #262626;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #60a5fa;
+  --sidebar-primary-foreground: #1a1a1a;
+  --sidebar-accent: #333333;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #404040;
+  --sidebar-ring: #3b82f6;
+}
+
+/* -----------------------------------------
+   BASE LAYER FIXES (Tailwind v3 compatible)
+------------------------------------------ */
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: ui-sans-serif, system-ui, -apple-system,
+      'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  }
+}
