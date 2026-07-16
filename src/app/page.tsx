@@ -34,7 +34,7 @@ export default function Home() {
           v1.0 is now live for LASUED students
         </div>
          <p className="text-[10px] uppercase tracking-widest font-bold text-slate-400">
-                Powered by Danova Technologies
+                A final year project 
             </p>
         
         {/* Hero Text */}
